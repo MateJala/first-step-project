@@ -1,0 +1,36 @@
+.fixed {
+    @include size(200px, 56px);
+    @include flex(center);
+    gap: 10px;
+    background-color: $blue;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    cursor: pointer;
+    svg {
+        @include size(26px, 26px);
+    }
+    p{
+        @include text(#fff, "montserrat", 18px, 400);
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .fixed {
+        @include size(56px, 56px);
+        p {
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .fixed {
+        @include size(40px, 40px);
+        svg {
+            @include size(20px, 20px);
+        }
+        p {
+            display: none;
+        }
+    }
+}

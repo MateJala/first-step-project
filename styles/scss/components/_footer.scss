@@ -1,0 +1,129 @@
+footer {
+    @include size(100%, 538px);
+    @include flex(center);
+    .footer {
+        @include size(95%, 457px);
+        .upper {
+            @include flex(center);
+            @include size(100%, 400px);
+            flex-wrap: wrap;
+            .box {
+                @include size(25%, 100%);
+                @include flex(center);
+                flex-direction: column;
+                gap: 40px;
+                border: 1px solid #d9d9d9;
+                h1 {
+                    @include text($blue, "montserrat", 28px, 400);
+                    a {
+                        @include text(#000, "montserrat", 24px, 400);
+                        letter-spacing: 9px
+                    }
+                }
+                .links {
+                    @include flex(center);
+                    flex-direction: column;
+                    gap: 25px;
+                    p, a{
+                        @include text(#000, "nanito", 16px, 300);
+                        cursor: pointer;
+                        span {
+                            cursor: text;
+                        }
+                    }
+                }
+                .socals {
+                    @include flex(center);
+                    gap: 15px;
+                    svg {
+                        @include size(26px, 26px);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .bottom {
+            border: 1px solid #d9d9d9;
+            @include flex(center);
+            @include size(100%, 57px);
+            p {
+                @include text(#000, "nanito", 16px, 300);
+                span {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    footer {
+        @include size(100%, 438px);
+        .footer {
+            @include size(95%, 357px);
+            .upper{
+                @include size(100%, 300px);
+            }
+        }
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    footer {
+        @include size(100%, 738px); 
+        .footer {
+            @include size(95%, 657px);
+            .upper{
+                @include size(100%, 300px);
+                .box {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    footer {
+        @include size(100%, 378px); 
+        .footer {
+            @include size(95%, 297px);
+            .upper{
+                @include size(100%, 250px);
+                .visage {
+                    display: none;
+                }
+                .box {
+                    width: 33%;
+                    gap: 20px;
+                    text-align: center;
+                    h1 {
+                        @include text($blue, "montserrat", 23px, 400);
+                    }
+                    .links {
+                        @include flex(center);
+                        flex-direction: column;
+                        gap: 15px;
+                        p, a{
+                            @include text(#000, "nanito", 13px, 300);
+                        }
+                    }
+                    .socals {
+                        @include flex(center);
+                        gap: 5px;
+                        svg {
+                            @include size(20px, 20px);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .bottom {
+                @include size(99%, 47px);
+                p {
+                    @include text(#000, "nanito", 12px, 300);
+                }
+            }
+        }
+    }
+}

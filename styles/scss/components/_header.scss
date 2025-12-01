@@ -1,0 +1,83 @@
+
+header {
+    @include flex(space-between);
+    @include size(95%, 92.58px);
+    nav {
+        @include flex(center);
+        gap: 30px;
+        a {
+            @include text(#000, "montserrat", 16px, 400);
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    h1 {
+        a {
+            @include text(#000, "montserrat", 24px, 400);
+            letter-spacing: 9px
+        }
+    }
+    .right {
+        @include flex(center);
+        gap: 30px;
+        .hoveringBlue {
+            &:hover {
+                color: $blue;
+            }
+        }
+        svg {
+            @include size(26px, 26px);
+            cursor: pointer;
+        }
+        .login {
+            @include flex(center);
+            gap: 12px;
+            p {
+                @include text(#000, "nanito", 16px, 300);
+                cursor: pointer;
+                &:hover {
+                    opacity: 75%;
+                }
+            }
+        }
+    }
+    .burger {
+        display: none;
+        svg {
+            @include size(26px, 26px);
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    header {
+        .visage {
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    header {
+        nav {
+            @include flex(center);
+            gap: 40px;
+            a {
+                @include text(#000, "montserrat", 13px, 400);
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+        .visage {
+            display: none;
+        }
+        .right {
+            display: none;
+        }
+        .burger {
+            display: inline;
+        }
+    }
+}
