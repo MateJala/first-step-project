@@ -29,9 +29,10 @@ header {
   height: 92.58px;
 }
 header nav {
+  width: 33%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 30px;
 }
 header nav a {
@@ -44,6 +45,12 @@ header nav a {
 header nav a:hover {
   color: #0a1fdb;
 }
+header nav .active {
+  color: #0a1fdb;
+}
+header nav .invis {
+  display: none;
+}
 header h1 a {
   color: #000;
   font-family: "montserrat";
@@ -53,9 +60,10 @@ header h1 a {
   letter-spacing: 9px;
 }
 header .right {
+  width: 33%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 30px;
 }
 header .right .hoveringBlue:hover {
@@ -93,16 +101,24 @@ header .burger svg {
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
+  header nav .invis {
+    display: inline;
+  }
   header .visage {
     display: none;
   }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
+  header {
+    width: 95%;
+    height: 67.58px;
+  }
   header nav {
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 28px;
   }
   header nav a {
     color: #000;
@@ -113,6 +129,9 @@ header .burger svg {
   }
   header nav a:hover {
     color: #0a1fdb;
+  }
+  header nav .invis {
+    display: inline;
   }
   header .visage {
     display: none;
@@ -134,6 +153,10 @@ footer {
 footer .footer {
   width: 95%;
   height: 457px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 footer .footer .upper {
   display: flex;
@@ -251,23 +274,27 @@ footer .footer .bottom p span {
 @media screen and (min-width: 300px) and (max-width: 600px) {
   footer {
     width: 100%;
-    height: 378px;
+    height: 433px;
   }
   footer .footer {
     width: 95%;
-    height: 297px;
+    height: 347px;
   }
   footer .footer .upper {
     width: 100%;
-    height: 250px;
+    height: 300px;
+    flex-direction: column;
   }
   footer .footer .upper .visage {
     display: none;
   }
   footer .footer .upper .box {
-    width: 33%;
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
     gap: 20px;
     text-align: center;
+    padding: 0 10px;
   }
   footer .footer .upper .box h1 {
     color: #0a1fdb;
@@ -280,8 +307,7 @@ footer .footer .bottom p span {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 15px;
+    gap: 5px;
   }
   footer .footer .upper .box .links p, footer .footer .upper .box .links a {
     color: #000;
@@ -297,12 +323,13 @@ footer .footer .bottom p span {
     gap: 5px;
   }
   footer .footer .upper .box .socals svg {
+    display: none;
     width: 20px;
     height: 20px;
     cursor: pointer;
   }
   footer .footer .bottom {
-    width: 99%;
+    width: 100%;
     height: 47px;
   }
   footer .footer .bottom p {
@@ -359,4 +386,50 @@ footer .footer .bottom p span {
   .fixed p {
     display: none;
   }
+}
+#index {
+  width: 95%;
+  height: auto;
+}
+#index .first {
+  position: relative;
+}
+#index .first img {
+  width: 100%;
+  height: 640px;
+}
+#index .first .text {
+  position: absolute;
+  left: 8.84%;
+  bottom: 200px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 55px;
+}
+#index .first .text h1 {
+  width: 400px;
+  color: #000;
+  font-family: "montserrat";
+  font-size: 68px;
+  font-weight: 400;
+  text-decoration: none;
+}
+#index .first .text button {
+  width: 144px;
+  height: 40px;
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  border: 1px solid #0a1fdb;
+  border-radius: 5px;
+  background: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+#index .first .text button:hover {
+  background-color: #0a1fdb;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

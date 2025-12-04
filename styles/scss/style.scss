@@ -16,3 +16,50 @@ body {
 @import "./components/footer";
 @import "./components/fixed";
 
+#index {
+     @include size(95%, auto);
+    .first {
+        position: relative;
+        img {
+            @include size(100%, 640px);
+        }
+        .text {
+            position: absolute;
+            left: 8.84%;
+            bottom: 200px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 55px;
+            h1 {
+                width: 400px;
+                @include text(#000, "montserrat", 68px, 400);
+            }
+            button {
+                @include size(144px, 40px);
+                @include text($blue, "montserrat", 16px, 400);
+                border: 1px solid $blue;
+                border-radius: 5px;
+                background: none;
+                transition: background-color 0.4s ease, color 0.4s ease;
+                cursor: pointer;
+                &:hover {
+                    background-color: $blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    #index {
+    
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    
+}

@@ -3,13 +3,20 @@ header {
     @include flex(space-between);
     @include size(95%, 92.58px);
     nav {
-        @include flex(center);
+        width: 33%;
+        @include flex(flex-start);
         gap: 30px;
         a {
             @include text(#000, "montserrat", 16px, 400);
             &:hover {
                 color: $blue;
             }
+        }
+        .active {
+            color: $blue;
+        }
+        .invis {
+            display: none;
         }
     }
     h1 {
@@ -19,7 +26,8 @@ header {
         }
     }
     .right {
-        @include flex(center);
+        width: 33%;
+        @include flex(flex-end);
         gap: 30px;
         .hoveringBlue {
             &:hover {
@@ -53,6 +61,11 @@ header {
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
     header {
+        nav {
+            .invis {
+                display: inline;
+            }
+        }
         .visage {
             display: none;
         }
@@ -60,14 +73,19 @@ header {
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
     header {
+        @include size(95%, 67.58px);
         nav {
+            width: auto;
             @include flex(center);
-            gap: 40px;
+            gap: 28px;
             a {
                 @include text(#000, "montserrat", 13px, 400);
                 &:hover {
                     color: $blue;
                 }
+            }
+            .invis {
+                display: inline;
             }
         }
         .visage {
