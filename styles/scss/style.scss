@@ -17,12 +17,16 @@ body {
 @import "./components/fixed";
 
 #index {
-     @include size(95%, auto);
+    @include size(95%, auto);
+    @include flex(center);
+    flex-direction: column;
+    gap: 80px;
     .first {
+        @include size(100%, 640px);
         position: relative;
-        img {
-            @include size(100%, 640px);
-        }
+        background-image: url(../../resources/images/image1_full.png);
+        background-position: center;
+        background-size: cover;
         .text {
             position: absolute;
             left: 8.84%;
@@ -50,16 +54,449 @@ body {
             }
         }
     }
+    .second {
+        @include size(100%, auto);
+        @include flex(center);
+        flex-direction: column;
+        gap: 40px;
+        h2 {
+            @include text($blue, "montserrat", 28px, 400);
+        }
+        .cards {
+            width: 100%;
+            @include flex(center);
+            flex-wrap: wrap;
+            gap: 20px 20px;
+            .card {
+                @include size(420px, 645px);
+                @include flex(center);
+                flex-direction: column;
+                border: 2px solid #c7c7c7;
+                cursor: pointer;
+                .upper {
+                    @include size(100%, 556px);
+                    position: relative;
+                    .sale{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 2px 10px;
+                        @include text(#fff, "nanito", 14px, 300);
+                        background-color: #000;
+                    }
+                    .info {
+                        position: absolute;
+                        bottom: 0;
+                        @include size(100%, 50px);
+                        @include flex(center);
+                        background-color: rgba(255, 255, 255, 0.5);
+                        p {
+                            @include text(#000, "nanito", 14px, 300);
+                        }
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.4s ease, visibility 0.4s ease;
+                    }
+                }
+                .bottom {
+                    @include size(100%, 85px);
+                    @include flex(center);
+                    flex-direction: column;
+                    gap: 10px;
+                    p {
+                        @include text(#000, "montserrat", 16px, 400);
+                    }
+                    .price {
+                        @include text($blue, "montserrat", 16px, 400);
+                        span {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+                &:hover {
+                    .info {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            .card1 .upper{
+                background-image: url(../../resources/images/card1.png);
+                background-position: center;
+                background-size: cover;
+                transition: background-image 0.4s ease;
+                &:hover {
+                    background-image: url(../../resources/images/mask1.png);    
+                }
+            }
+            .card2 .upper{
+                background-image: url(../../resources/images/card2.png);
+                background-position: center;
+                background-size: cover;
+                transition: background-image 0.4s ease;
+                &:hover {
+                    background-image: url(../../resources/images/mask2.png);    
+                }
+            }
+            .card3 .upper{
+                background-image: url(../../resources/images/card3.png);
+                background-position: center;
+                background-size: cover;
+                transition: background-image 0.4s ease;
+                &:hover {
+                    background-image: url(../../resources/images/mask3.png);    
+                }
+            }
+            .card4 .upper{
+                background-image: url(../../resources/images/card4.png);
+                background-position: center;
+                background-size: cover;
+                transition: background-image 0.4s ease;
+                &:hover {
+                    background-image: url(../../resources/images/mask4.png);    
+                }
+            }
+        }
+        a button {
+            @include size(144px, 40px);
+            @include text($blue, "montserrat", 16px, 400);
+            border: 1px solid $blue;
+            border-radius: 5px;
+            background: none;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            cursor: pointer;
+            &:hover {
+                background-color: $blue;
+                color: #fff;
+            }
+        }
+    }
+    .third {
+        @include size(100%, auto);
+        @include flex(center);
+        flex-direction: column;
+        gap: 40px;
+        h2 {
+            @include text($blue, "montserrat", 28px, 400);
+        }
+        .cards {
+            width: 100%;    
+            @include flex(space-between);
+            .card {
+                @include size(31.5%, 480px);
+                @include flex(center);
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 60px;
+                background-color: #fdf8ec;
+                svg {
+                    @include size(126px, 152px);
+                }
+                .text {
+                    @include flex(center);
+                    flex-direction: column;
+                    gap: 25px;
+                    h3 {
+                        @include text($blue, "montserrat", 20px, 400);
+                    }
+                    p {
+                        width: 260px;
+                        text-align: center;
+                        line-height: 25.6px;
+                        @include text(#000, "nanito", 16px, 300);
+                    }
+                }
+            }
+            .bg-orange {
+                background-color: #fe9c7a;
+            }
+        }
+    }
+    .fourth {
+        @include size(100%, auto);
+        @include flex(center);
+        flex-direction: column;
+        gap: 40px;
+        h2 {
+            @include text($blue, "montserrat", 28px, 400);
+        }
+        .bottom {
+            @include size(100%, auto);
+            @include flex(space-between);
+            div {  
+                @include size(49%, 680px);
+                @include flex(center);
+                background-color: #d9ecff;
+                p {
+                    width: 375px;
+                    text-align: center;
+                    line-height: 32px;
+                    @include text($blue, "montserrat", 20px, 400);
+                }
+            }
+            img {
+                @include size(49%, 680px);
+            }
+        }
+    }
+    .fifth {
+        @include size(100%, auto);
+        @include flex(center);
+        flex-direction: column;
+        gap: 40px;
+        h2 {
+            @include text($blue, "montserrat", 28px, 400);
+        }
+        .bg {
+            @include flex(center);
+            flex-wrap: wrap;
+            gap: 80px;
+            background-color: #fdf8ec;
+            padding: 80px 0;
+            .box {
+                @include flex(center);
+                @include size(309px,309px);
+                cursor: pointer;
+                .inside {
+                    @include size(100%, 100%);
+                    background-color: rgba(0, 0, 0, 0.75);
+                     @include flex(center);
+                    p {
+                        text-align: center;
+                        @include text(#f8f8f8, "nanito", 16px, 300)
+                    }
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.4s ease, visibility 0.4s ease;
+                }
+                &:hover {
+                    .inside {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            .bg1 {
+                background-image: url(../../resources/images/bg1.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg2 {
+                background-image: url(../../resources/images/bg2.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg3 {
+                background-image: url(../../resources/images/bg3.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg4 {
+                background-image: url(../../resources/images/bg4.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg5 {
+                background-image: url(../../resources/images/bg5.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg6 {
+                background-image: url(../../resources/images/bg6.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg7 {
+                background-image: url(../../resources/images/bg7.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .bg8 {
+                background-image: url(../../resources/images/bg8.png);
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1200px) {
     #index {
-    
+        .first {
+            background-image: url(../../resources/images/image1_1200.png);
+        }
+        .second .cards .card {
+            width: 410px;
+        }
+
     }
 }
 @media screen and (min-width: 601px) and (max-width: 900px) {
-    
+    #index {
+        .first {
+            height: 540px;
+            background-image: url(../../resources/images/image1_1200.png);
+        }
+        .second .cards .card {
+            @include size(48%, 525px);
+            .upper {
+                height: 436px;
+            }
+        }
+        .third {
+            .cards {
+                width: 100%;    
+                justify-content: center;
+                flex-direction: column;
+                gap: 25px;
+                .card {
+                    @include size(100%, 200px);
+                    justify-content: center;
+                    flex-direction: row;
+                }
+            }
+        }
+        .fourth {
+            .bottom {
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                div {
+                    @include size(100%, 250px);
+                    p {
+                        width: 80%;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 415px;
+                }
+            }
+        }
+        .fifth {
+            .bg {
+                gap: 10px;
+                .box {
+                    @include size(49%, 309px);
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
-    
+    #index {
+        .first {
+            @include flex(center);
+            height: 440px;
+            background-image: url(../../resources/images/image1_phone.png);
+            .text {
+                position: static;
+                align-items: center;
+                h1 {
+                    width: auto;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 65px;
+                }
+                button {
+                    color: #fff;
+                    border: 1px solid #fff;
+                    transition: background-color 0.4s ease, color 0.4s ease;
+                    &:hover {
+                        background-color: #fff;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .second {
+            h2 {
+                font-size: 24px;
+            }
+            .cards {
+                gap: 10px;
+                .card {
+                    @include size(48%, 345px);
+                    .upper {
+                        height: 256px;
+                        .sale {
+                            font-size: 12px;
+                        }
+                    }
+                    .bottom {
+                        p, .price {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            a button {
+                font-size: 13px;
+            }
+        }
+        .third {
+            h2 {
+                font-size: 24px;
+            }
+            .cards {
+                width: 100%;    
+                justify-content: center;
+                flex-direction: column;
+                gap: 25px;
+                .card {
+                    @include size(100%, 280px);
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 20px;
+                    .text {
+                        h3 {
+                            font-size: 16px;
+                        }
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .fourth {
+            h2 {
+                font-size: 24px;
+            }
+            .bottom {
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                div {
+                    @include size(100%, auto);
+                    padding: 10px 0;
+                    p {
+                        width: 80%;
+                        font-size: 16px;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .fifth {
+            h2 {
+                text-align: center;
+                font-size: 24px;
+            }
+            .bg {
+                gap: 5px;
+                padding: 30px 0;
+                .box {
+                    @include size(49%, 209px);
+                    .inside p {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
 }
