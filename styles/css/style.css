@@ -1126,6 +1126,171 @@ footer .footer .bottom p span {
   background-image: url(../../resources/images/shopmask12.png);
 }
 
+#contact {
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+#contact h1 {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 68px;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: #fdf8ec;
+}
+#contact section {
+  width: 100%;
+  height: 707px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact section .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 33.4%;
+  height: 100%;
+  border: 1px solid #000;
+  padding-top: 100px;
+}
+#contact section .left div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+#contact section .left div h2 {
+  align-self: flex-start;
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 28px;
+  font-weight: 400;
+  text-decoration: none;
+}
+#contact section .left div p {
+  color: #000;
+  font-family: "nanito";
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  width: 243px;
+  line-height: 25.6px;
+}
+#contact section .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 66.6%;
+  height: 100%;
+  border: 1px solid #000;
+  border-left: none;
+  padding-top: 100px;
+}
+#contact section .right .center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+#contact section .right .center h2 {
+  align-self: flex-start;
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 28px;
+  font-weight: 400;
+  text-decoration: none;
+}
+#contact section .right .center form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+#contact section .right .center form .horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+#contact section .right .center form .vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#contact section .right .center form .vertical label {
+  color: #0a1fdb;
+  font-family: "nanito";
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  align-self: flex-start;
+}
+#contact section .right .center form input {
+  width: 268.5px;
+  height: 42px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 8px 2px 8px 12px;
+}
+#contact section .right .center form input:hover {
+  border-color: #0a1fdb;
+}
+#contact section .right .center form input:focus {
+  outline: none;
+  border-color: #0a1fdb;
+}
+#contact section .right .center form textarea {
+  resize: none;
+  width: 555px;
+  height: 92px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+#contact section .right .center form textarea:hover {
+  border-color: #0a1fdb;
+}
+#contact section .right .center form textarea:focus {
+  outline: none;
+  border-color: #0a1fdb;
+}
+#contact section .right .center form button {
+  width: 555px;
+  height: 43px;
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  border: 1px solid #0a1fdb;
+  border-radius: 5px;
+  background: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+#contact section .right .center form button:hover {
+  background-color: #0a1fdb;
+  color: #fff;
+}
+
 @media screen and (min-width: 901px) and (max-width: 1200px) {
   #index .first {
     background-image: url(../../resources/images/image1_1200.png);
@@ -1141,6 +1306,12 @@ footer .footer .bottom p span {
   }
   #shop section .cards .card {
     width: 30%;
+  }
+  #contact section .right .center form input {
+    width: 243.5px;
+  }
+  #contact section .right .center form textarea, #contact section .right .center form button {
+    width: 505px;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -1198,6 +1369,26 @@ footer .footer .bottom p span {
   }
   #shop section .cards .card {
     width: 45%;
+  }
+  #contact section {
+    height: auto;
+    flex-direction: column;
+  }
+  #contact section .left {
+    padding: 30px 0;
+    width: 100%;
+  }
+  #contact section .right {
+    padding: 30px 0;
+    width: 100%;
+    border-top: none;
+    border-left: 1px solid #000;
+  }
+  #contact section .right .center form input {
+    width: 243.5px;
+  }
+  #contact section .right .center form textarea, #contact section .right .center form button {
+    width: 505px;
   }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
@@ -1339,5 +1530,52 @@ footer .footer .bottom p span {
   #shop section .cards .card {
     width: 48%;
     height: 345px;
+  }
+  #contact h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+  #contact section {
+    height: auto;
+    flex-direction: column;
+  }
+  #contact section .left {
+    padding: 30px 0;
+    width: 100%;
+  }
+  #contact section .left div h2 {
+    font-size: 24px;
+  }
+  #contact section .right {
+    padding: 30px 0;
+    width: 100%;
+    border-top: none;
+    border-left: 1px solid #000;
+  }
+  #contact section .right .center {
+    width: 100%;
+  }
+  #contact section .right .center h2 {
+    padding: 0 10px;
+    font-size: 24px;
+  }
+  #contact section .right .center form {
+    width: 100%;
+  }
+  #contact section .right .center form .horizontal {
+    width: 100%;
+    flex-direction: column;
+  }
+  #contact section .right .center form .vertical {
+    width: 100%;
+  }
+  #contact section .right .center form .vertical label {
+    padding: 0 10px;
+  }
+  #contact section .right .center form input {
+    width: 90%;
+  }
+  #contact section .right .center form textarea, #contact section .right .center form button {
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */

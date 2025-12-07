@@ -568,6 +568,119 @@ body {
     }
 }
 
+#contact {
+    @include size(95%, auto);
+    @include flex(center);
+    flex-direction: column;
+    gap: 40px;
+    h1 {
+        @include size(100%, 200px);
+        @include flex(center);
+        @include text($blue, "montserrat", 68px, 400);
+        background-color: #fdf8ec;
+    }
+    section {
+        @include size(100%, 707px);
+        @include flex(center);
+        .left {
+            @include flex(flex-start);
+            flex-direction: column;
+            @include size(33.4%, 100%);
+            border: 1px solid #000;
+            padding-top: 100px;
+            div {
+                @include flex(flex-start);
+                flex-direction: column;
+                gap: 40px;
+                h2 {
+                    align-self: flex-start;
+                    @include text($blue, "montserrat", 28px, 400);
+                }
+                p { 
+                    @include text(#000, "nanito", 16px, 300);
+                    width: 243px;
+                    line-height: 25.6px;
+                }
+            }
+            
+        }
+        .right {
+            @include flex(flex-start);
+            flex-direction: column;
+            @include size(66.6%, 100%);
+            border: 1px solid #000;
+            border-left: none;
+            padding-top: 100px;
+            .center {
+                @include flex(flex-start);
+                flex-direction: column;
+                gap: 40px;
+                h2 {
+                    align-self: flex-start;
+                    @include text($blue, "montserrat", 28px, 400);
+                }
+                form {
+                    @include flex(center);
+                    flex-direction: column;
+                    gap: 30px;
+                    .horizontal {
+                        @include flex(center);
+                        gap: 25px;
+                    }
+                    .vertical {
+                        @include flex(center);
+                        flex-direction: column;
+                        gap: 10px;
+                        label {
+                            @include text($blue, "nanito", 16px, 300);
+                            align-self: flex-start;
+                        }
+                    }
+                    input {
+                        @include size(268.5px, 42px);
+                        border: 1px solid #000;
+                        border-radius: 5px;
+                        padding: 8px 2px 8px 12px;
+                        &:hover {
+                            border-color: $blue;
+                        }
+                        &:focus {
+                            outline: none;
+                            border-color: $blue;
+                        }
+                    }
+                    textarea {
+                        resize: none;
+                        @include size(555px, 92px);
+                        border: 1px solid #000;
+                        border-radius: 5px;
+                        padding: 8px 12px;
+                        &:hover {
+                            border-color: $blue;
+                        }
+                        &:focus {
+                            outline: none;
+                            border-color: $blue;
+                        }
+                    }
+                    button {
+                        @include size(555px, 43px);
+                        @include text($blue, "montserrat", 16px, 400);
+                        border: 1px solid $blue;
+                        border-radius: 5px;
+                        background: none;
+                        transition: background-color 0.4s ease, color 0.4s ease;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $blue;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 901px) and (max-width: 1200px) {
     #index {
@@ -593,6 +706,22 @@ body {
         }
     }
 
+    #contact {
+        section {
+            .right {
+                .center {
+                    form {
+                        input {
+                            width: 243.5px;
+                        }
+                        textarea, button {
+                            width: 505px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width: 601px) and (max-width: 900px) {
     #index {
@@ -659,6 +788,32 @@ body {
         }
     }
 
+    #contact {
+        section {
+            height: auto;
+            flex-direction: column;
+            .left {
+                padding: 30px 0;
+                width: 100%;
+            }
+            .right {
+                padding: 30px 0;
+                width: 100%;
+                border-top: none;
+                border-left: 1px solid #000;
+                .center {
+                    form {
+                        input {
+                            width: 243.5px;
+                        }
+                        textarea, button {
+                            width: 505px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
     #index {
@@ -816,4 +971,53 @@ body {
         }
     }
 
+    #contact {
+        h1 {
+            text-align: center;
+            font-size: 60px;
+        }
+        section {
+            height: auto;
+            flex-direction: column;
+            .left {
+                padding: 30px 0;
+                width: 100%;
+                div h2 {
+                    font-size: 24px;
+                }          
+            }
+            .right { 
+                padding: 30px 0;
+                width: 100%;
+                border-top: none;
+                border-left: 1px solid #000;
+                .center {
+                    h2 {
+                        padding: 0 10px;
+                        font-size: 24px;
+                    }
+                    width: 100%;
+                    form {
+                        width: 100%;
+                        .horizontal {
+                            width: 100%;
+                            flex-direction: column;
+                        }
+                        .vertical {
+                            width: 100%;
+                            label {
+                                padding: 0 10px;
+                            }
+                        }
+                        input {
+                            width: 90%;
+                        }
+                        textarea, button {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
