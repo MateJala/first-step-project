@@ -1,3 +1,6 @@
+p, h3, h1 {
+    margin: 0!important;
+}
 @import "./base/mixins";
 @import "./base/variables";
 @import "./base/fonts";
@@ -567,7 +570,112 @@ body {
         }     
     }
 }
-
+#FAQ {
+    @include size(95%, auto);
+    @include flex(center);
+    flex-direction: column;
+    gap: 50px;
+    h1 {
+        @include size(100%, 200px);
+        @include flex(center);
+        @include text($blue, "montserrat", 68px, 400);
+        background-color: #fdf8ec;
+    } 
+    section {
+        margin: 50px 0;
+        @include flex(center);
+        flex-direction: column;
+        width: 55%;
+        gap: 30px;
+        .horizontalup {
+            width: 100%;
+            @include flex(space-between);
+            gap: 10px;
+            h3{
+                @include text($blue, "montserrat", 20px, 400);
+            }
+            div {
+                @include flex(center);
+                input {
+                    @include size(256px, 40px);
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    @include text(#000, "nanito", 16px, 300);
+                    &:focus {
+                       outline: none
+                    }
+                }
+                .center {
+                    @include flex(center);
+                    height: 40px;
+                    border-bottom: 1px solid #000;
+                    svg {
+                        @include size(24px, 24px);
+                    }
+                }
+            }
+        }
+        .horizontaldown {
+            width: 100%;
+            @include flex(flex-start);
+            gap: 10px;
+            p {
+                @include text(#000, "nanito", 14px, 300);
+                cursor: pointer;
+                padding: 14px 27px;
+            }
+            ._active {
+                color: $blue;
+                border-bottom: 3px solid $blue;
+            }
+        }
+        .accordion {
+            width: 100%;
+            @include flex(center);
+            flex-direction: column;
+            gap: 20px;
+            .accordion-item {
+                width: 100%;
+                border: none;
+                border: 1px solid #000;
+                .accordion-header {
+                    .accordion-button, collapsed {
+                        @include text(#000, "nanito", 16px, 300);
+                        background-color: #fff;
+                        padding: 24px;
+                        border: none;
+                        &:focus {
+                            box-shadow: none;
+                            outline: none;
+                        }
+                    }
+                }
+                .accordion-collapse, collapse {
+                    .accordion-body {
+                        padding: 0px 24px 24px;
+                        @include flex(center);
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: 16px;
+                        p {
+                            @include text(#000, "nanito", 16px, 300);
+                        }
+                        .links {
+                            @include flex(center);
+                            align-self: flex-start;
+                            gap: 16px;
+                            svg {
+                                @include size(24px, 24px);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
 #contact {
     @include size(95%, auto);
     @include flex(center);
@@ -705,7 +813,9 @@ body {
             }
         }
     }
-
+    #FAQ section {
+        width: 75%;
+    }
     #contact {
         section {
             .right {
@@ -787,7 +897,22 @@ body {
             }
         }
     }
+    #FAQ section {  
+        width: 85%;
+        margin-top: 0;
+        .horizontalup {
+            justify-content: center;
+            flex-direction: column;
+            h3 {
+                @include flex(center);
+                width: 100%;
+            }
+            div input {
+                width: 100%;
+            }
 
+        }
+    }
     #contact {
         section {
             height: auto;
@@ -970,7 +1095,51 @@ body {
             }
         }
     }
+    #FAQ h1 {
+        font-size: 60px;
+    }
+    #FAQ section {  
+        width: 85%;
+        margin: 0 0 30px 0;
+        .horizontalup {
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            h3 {
+                text-align: center;
+                @include flex(center);
+                width: 100%;
+                font-size: 16px;
+            }
+            div input {
+                width: 100%;
+                font-size: 14px;
+            }
 
+        }
+        .horizontaldown {
+            p {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+        .accordion {
+            .accordion-item {
+                .accordion-header {
+                    .accordion-button, collapsed {
+                        font-size: 14px;
+                    }
+                }
+                .accordion-collapse, collapse {
+                    .accordion-body {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     #contact {
         h1 {
             text-align: center;
