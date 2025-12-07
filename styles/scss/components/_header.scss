@@ -8,6 +8,7 @@ header {
         gap: 30px;
         a {
             @include text(#000, "montserrat", 16px, 400);
+            transition: color 0.4s ease;
             &:hover {
                 color: $blue;
             }
@@ -30,6 +31,7 @@ header {
         @include flex(flex-end);
         gap: 30px;
         .hoveringBlue {
+            transition: color 0.4s ease;
             &:hover {
                 color: $blue;
             }
@@ -44,6 +46,7 @@ header {
             p {
                 @include text(#000, "nanito", 16px, 300);
                 cursor: pointer;
+                transition: opacity 0.4s ease;
                 &:hover {
                     opacity: 75%;
                 }
@@ -80,6 +83,7 @@ header {
             gap: 28px;
             a {
                 @include text(#000, "montserrat", 13px, 400);
+                transition: color 0.4s ease;
                 &:hover {
                     color: $blue;
                 }

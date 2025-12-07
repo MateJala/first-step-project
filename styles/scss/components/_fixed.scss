@@ -9,6 +9,7 @@
     cursor: pointer;
     svg {
         @include size(26px, 26px);
+        color: #fff;
     }
     p{
         @include text(#fff, "montserrat", 18px, 400);

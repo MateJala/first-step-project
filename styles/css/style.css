@@ -41,6 +41,7 @@ header nav a {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+  transition: color 0.4s ease;
 }
 header nav a:hover {
   color: #0a1fdb;
@@ -66,6 +67,9 @@ header .right {
   justify-content: flex-end;
   gap: 30px;
 }
+header .right .hoveringBlue {
+  transition: color 0.4s ease;
+}
 header .right .hoveringBlue:hover {
   color: #0a1fdb;
 }
@@ -87,6 +91,7 @@ header .right .login p {
   font-weight: 300;
   text-decoration: none;
   cursor: pointer;
+  transition: opacity 0.4s ease;
 }
 header .right .login p:hover {
   opacity: 75%;
@@ -126,6 +131,7 @@ header .burger svg {
     font-size: 13px;
     font-weight: 400;
     text-decoration: none;
+    transition: color 0.4s ease;
   }
   header nav a:hover {
     color: #0a1fdb;
@@ -356,6 +362,7 @@ footer .footer .bottom p span {
 .fixed svg {
   width: 26px;
   height: 26px;
+  color: #fff;
 }
 .fixed p {
   color: #fff;
@@ -800,12 +807,340 @@ footer .footer .bottom p span {
   background-size: cover;
 }
 
+#shop {
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+#shop aside {
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  flex-direction: column;
+  gap: 35px;
+}
+#shop aside .browse {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#shop aside .browse h2 {
+  color: #000;
+  font-family: "montserrat";
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  align-self: flex-start;
+}
+#shop aside .browse p {
+  color: #000;
+  font-family: "nanito";
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+#shop aside .browse p:hover {
+  text-decoration: underline;
+}
+#shop aside .browse .active {
+  color: #0a1fdb;
+  text-decoration: underline;
+  transition: color 0.4s ease;
+}
+#shop aside .browse .active:hover {
+  color: #000;
+}
+#shop aside .filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#shop aside .filter h2 {
+  color: #000;
+  font-family: "montserrat";
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  align-self: flex-start;
+}
+#shop aside .filter .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+}
+#shop aside .filter .check input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+#shop aside .filter .check p {
+  color: #000;
+  font-family: "nanito";
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+}
+#shop aside div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+#shop aside div .selection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  cursor: pointer;
+}
+#shop aside div .selection p {
+  color: #000;
+  font-family: "nanito";
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+#shop aside .line {
+  width: 100%;
+  height: 1px;
+  background-color: #c7c7c7;
+}
+#shop section {
+  width: 86%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+#shop section h1 {
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 60px;
+  font-weight: 400;
+  text-decoration: none;
+  align-self: flex-start;
+}
+#shop section .sort {
+  align-self: flex-end;
+  color: #000;
+  font-family: "nanito";
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+}
+#shop section .sort svg {
+  width: 24px;
+  height: 24px;
+}
+#shop section .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#shop section .cards .card {
+  width: 22%;
+  height: 481px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #c7c7c7;
+  cursor: pointer;
+}
+#shop section .cards .card .upper {
+  width: 100%;
+  height: 556px;
+  position: relative;
+}
+#shop section .cards .card .upper .sale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  color: #fff;
+  font-family: "nanito";
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  background-color: #000;
+}
+#shop section .cards .card .bottom {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#shop section .cards .card .bottom p {
+  color: #000;
+  font-family: "montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+#shop section .cards .card .bottom .price {
+  color: #0a1fdb;
+  font-family: "montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+#shop section .cards .card .bottom .price span {
+  text-decoration: line-through;
+}
+#shop section .cards .shop1 .upper {
+  background-image: url(../../resources/images/shop1.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop1 .upper:hover {
+  background-image: url(../../resources/images/shopmask1.png);
+}
+#shop section .cards .shop2 .upper {
+  background-image: url(../../resources/images/shop2.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop2 .upper:hover {
+  background-image: url(../../resources/images/shopmask2.png);
+}
+#shop section .cards .shop3 .upper {
+  background-image: url(../../resources/images/shop3.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop3 .upper:hover {
+  background-image: url(../../resources/images/shopmask3.png);
+}
+#shop section .cards .shop4 .upper {
+  background-image: url(../../resources/images/shop4.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop4 .upper:hover {
+  background-image: url(../../resources/images/shopmask4.png);
+}
+#shop section .cards .shop5 .upper {
+  background-image: url(../../resources/images/card1.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop5 .upper:hover {
+  background-image: url(../../resources/images/mask1.png);
+}
+#shop section .cards .shop6 .upper {
+  background-image: url(../../resources/images/shop6.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop6 .upper:hover {
+  background-image: url(../../resources/images/shopmask6.png);
+}
+#shop section .cards .shop7 .upper {
+  background-image: url(../../resources/images/shop7.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop7 .upper:hover {
+  background-image: url(../../resources/images/shopmask7.png);
+}
+#shop section .cards .shop8 .upper {
+  background-image: url(../../resources/images/shop8.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop8 .upper:hover {
+  background-image: url(../../resources/images/shopmask8.png);
+}
+#shop section .cards .shop9 .upper {
+  background-image: url(../../resources/images/card2.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop9 .upper:hover {
+  background-image: url(../../resources/images/mask2.png);
+}
+#shop section .cards .shop10 .upper {
+  background-image: url(../../resources/images/card3.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop10 .upper:hover {
+  background-image: url(../../resources/images/mask3.png);
+}
+#shop section .cards .shop11 .upper {
+  background-image: url(../../resources/images/card4.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop11 .upper:hover {
+  background-image: url(../../resources/images/mask4.png);
+}
+#shop section .cards .shop12 .upper {
+  background-image: url(../../resources/images/shop12.png);
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.4s ease;
+}
+#shop section .cards .shop12 .upper:hover {
+  background-image: url(../../resources/images/shopmask12.png);
+}
+
 @media screen and (min-width: 901px) and (max-width: 1200px) {
   #index .first {
     background-image: url(../../resources/images/image1_1200.png);
   }
   #index .second .cards .card {
     width: 410px;
+  }
+  #shop aside {
+    width: 20%;
+  }
+  #shop section {
+    width: 78%;
+  }
+  #shop section .cards .card {
+    width: 30%;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -854,6 +1189,15 @@ footer .footer .bottom p span {
   #index .fifth .bg .box {
     width: 49%;
     height: 309px;
+  }
+  #shop aside {
+    width: 20%;
+  }
+  #shop section {
+    width: 78%;
+  }
+  #shop section .cards .card {
+    width: 45%;
   }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
@@ -963,5 +1307,37 @@ footer .footer .bottom p span {
   }
   #index .fifth .bg .box .inside p {
     font-size: 13px;
+  }
+  #shop {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #shop aside {
+    width: 100%;
+    gap: 15px;
+  }
+  #shop aside .filter .check {
+    display: none;
+  }
+  #shop aside .selection .plus::after {
+    content: "+";
+  }
+  #shop aside .selection p .minus {
+    display: none;
+  }
+  #shop section {
+    width: 100%;
+  }
+  #shop section h1 {
+    text-align: center;
+    align-self: center;
+    font-size: 50px;
+  }
+  #shop section .cards {
+    gap: 10px;
+  }
+  #shop section .cards .card {
+    width: 48%;
+    height: 345px;
   }
 }/*# sourceMappingURL=style.css.map */
