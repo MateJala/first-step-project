@@ -77,8 +77,9 @@ footer {
         .footer {
             @include size(95%, 657px);
             .upper{
-                @include size(100%, 300px);
+                @include size(100%, 600px);
                 .box {
+                    @include size(100%, 300px);
                     width: 50%;
                 }
             }
